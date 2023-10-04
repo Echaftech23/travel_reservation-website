@@ -31,8 +31,7 @@ header{
 	align-items: center;
 	justify-content: space-between;
 	background: transparent;
-	padding: 30px 18%;
-	transition: ease .40s;
+	padding: 25px 18%;
 } 
 
 .logo{
@@ -100,9 +99,9 @@ section{
 	position: absolute;
 	bottom: 20px;
 	left: 50%;
-	transform: translateX(-50%);
+	transform: translate(-50%);
 	width: 50px;
-	height: 80px;
+	height: 90px;
 	border: 2px solid #fff;
 	border-radius: 30px;
 }
@@ -110,13 +109,25 @@ section{
 .home::after{
 	content: "";
 	position: absolute;
-	bottom: 50px;
+	bottom: 80px;
 	left: 50%;
-	transform: translateX(-50%);
-	width: 15px;
-	height: 15px;
+	margin-left: -6px;
+	width: 12px;
+	height: 12px;
 	background-color: #fff;
 	border-radius: 50%;
+	transition: animation ease .2s;
+	animation: scroll 1.3s infinite;
+}
+
+@keyframes scroll{
+	0%{
+		transform: translateY(0);
+	}
+	100%{
+		transform: translateY(60px);
+		opacity: 0;
+	}
 }
 
 .home-text h1{
