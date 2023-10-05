@@ -31,9 +31,9 @@ header{
 	align-items: center;
 	justify-content: space-between;
 	background: transparent;
-	padding: 25px 18%;
-} 
-
+	padding: 30px 18%;
+	transition: ease .40s;
+}
 .logo{
 	font-size: 35px;
 	font-weight: 600;
@@ -51,26 +51,15 @@ header{
 	border-radius: 4px;
 	transition: ease .40s;
 }
-.navbar a:hover{
+.navbar a:hover, .active{
 	background: var(--bg-color);
 	color: var(--text-color);
 	box-shadow: 5px 10px 30px rgb(85 85 85 / 20%);
 	border-radius: 4px;
 }
-
-.visible{
-	box-shadow: 1px 3px 5px rgba(160, 159, 159, 0.2);
+.active{
+	background: #c96010;
 }
-.visible .logo, .visible .navbar li a, .visible #menu-icon ,.sticky #menu-icon{
-	color: #000;
-}
-
-.visible .navbar li .active{
-	background: var(--main-color) ;
-	color: var(--bg-color);
-	border-radius: 4px;
-}
-
 #menu-icon{
 	color: var(--bg-color);
 	font-size: 35px;
@@ -82,11 +71,24 @@ header{
 section{
 	padding: 80px 18%;
 }
+
 .home{
+	background: url(../img/home.jpg);
+}
+.tour{
+	background: url(../img/background.jpg);
+}
+.abt{
+	background: url(../img/about.jpg);
+}
+.contact{
+	background: url(../img/background-4.jpg);
+}
+
+.home, .tour, .abt, .contact{
 	position: relative;
 	width: 100%;
 	height: 100vh;
-	background: url(../img/background.jpg);
 	background-size: cover;
 	background-position: center;
 	display: grid;
@@ -94,7 +96,7 @@ section{
 	align-items: center;
 }
 
-.home::before{
+.scroll::before{
 	content: "";
 	position: absolute;
 	bottom: 20px;
@@ -106,7 +108,7 @@ section{
 	border-radius: 30px;
 }
 
-.home::after{
+.scroll::after{
 	content: "";
 	position: absolute;
 	bottom: 80px;
@@ -532,4 +534,24 @@ header.sticky{
 		height: 85vh;
 		transition: .2s;
 	}
+}
+
+/*====================contact section========================*/
+.contact-section{
+	display: flex;
+	justify-content: space-between;
+	width: 50%;
+	background-color: #1067cc;
+	padding: 80px 18%;
+}
+.left{
+	flex-basis: 34%;
+	height: 50vh;
+}
+.left img{
+	width: 100%;
+	height: 100%;
+}
+.right{
+	flex-basis: 50%;
 }
